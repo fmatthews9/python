@@ -1,17 +1,4 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# This is a Codeacademy challenge for dictionaries. It exploers hurricanes in the Atlantic Ocean.
 
 # names of hurricanes
 names = ['Cuba I', 'San Felipe II Okeechobee', 'Bahamas', 'Cuba II', 'CubaBrownsville', 'Tampico', 'Labor Day', 'New England', 'Carol', 'Janet', 'Carla', 'Hattie', 'Beulah', 'Camille', 'Edith', 'Anita', 'David', 'Allen', 'Gilbert', 'Hugo', 'Andrew', 'Mitch', 'Isabel', 'Ivan', 'Emily', 'Katrina', 'Rita', 'Wilma', 'Dean', 'Felix', 'Matthew', 'Irma', 'Maria', 'Michael']
@@ -35,7 +22,7 @@ damages = ['Damages not recorded', '100M', 'Damages not recorded', '40M', '27.9M
 deaths = [90,4000,16,3103,179,184,408,682,5,1023,43,319,688,259,37,11,2068,269,318,107,65,19325,51,124,17,1836,125,87,45,133,603,138,3057,74]
 
 # write your update damages function here:
-
+# This function will change the string monetary values into floats
 
 def update_damages_not_recorded(damages):
   updated_damages = []
@@ -82,6 +69,7 @@ def hurricanes_by_year(hurricanes):
 
 hurricanes_by_year = hurricanes_by_year(hurricanes)
 
+# write your count affected areas function here:
 def hurricane_occurrence_in_area(hurricanes):
     hurricane_by_area = {}
     for cane in hurricanes:
@@ -92,15 +80,7 @@ def hurricane_occurrence_in_area(hurricanes):
                 hurricane_by_area[area] += 1
     return hurricane_by_area
 
-
 areas = hurricane_occurrence_in_area(hurricanes)
-#print(areas)
-# write your count affected areas function here:
-
-
-
-
-
 
 # write your find most affected area function here:
 
@@ -114,29 +94,21 @@ def most_affected_areas(areas):
     return(max_area, max_area_count)
 
 most_affected_areas = most_affected_areas(areas)
-print(most_affected_areas)
-
-
-
-
 
 # write your greatest number of deaths function here:
 
 def most_deaths(hurricanes):
-    max_death = 0
+    max_deaths = 0
     area = ""
     name = ""
     for cane in hurricanes:
-        if hurricanes[cane]["Deaths"] > max_death:
-            max_death = hurricanes[cane]["Deaths"]
+        if hurricanes[cane]["Deaths"] > max_deaths:
+            max_deaths = hurricanes[cane]["Deaths"]
             area = hurricanes[cane]["Areas Affected"]
             name = hurricanes[cane]["Name"]
-    return max_death, area, name
+    return max_deaths, area, name
 
 max_death = most_deaths(hurricanes)
-print(max_death)
-
-
 
 # write your catgeorize by mortality function here:
 def mortality_function(hurricanes):
@@ -163,9 +135,6 @@ def mortality_function(hurricanes):
 
 mortality = mortality_function(hurricanes)
 
-
-
-
 # write your greatest damage function here:
 
 def costly_hurricane(hurricanes):
@@ -179,12 +148,4 @@ def costly_hurricane(hurricanes):
     return cost, name
 
 cost = costly_hurricane(hurricanes)
-print(cost)
-
-
-
-
-
-
-# write your catgeorize by damage function here:
 
